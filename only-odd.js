@@ -14,16 +14,13 @@ for(let j = 0; j < aoa.length; j++){
     //a temporary variable that will store our array
     let arr = aoa[j]; //Temporal variable
     oddNumbers = []; //reset the array
-    //console.log("Array that is being evaluated:", temp)
+    //console.log("Array that is being evaluated:", arr)
 
     //start a for loop to check each element of the array
     for(let i = 0; i < arr.length; i++){
         //add a condition to see if the element is an odd number
-        if ( !(arr[i]%2 == 0) ){
-            //add element to the new array
-            oddNumbers.push(arr[i])
-            //console.log("Expect an odd number:", oddNumbers.push(temp[i]))
-        }
+        !(arr[i]%2 == 0) ? oddNumbers.push(arr[i]) : null
+            //add element to the new array          null to make ternary notation
     }
     console.log("Expected result:",oddNumbers)
 }
